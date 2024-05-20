@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App Client Demo</title>
+    
+    <link rel="stylesheet" href="./bootstrap.min.css" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script> 
+    <script defer src="./languageSwitcher.js"></script>
+    <script id="langScript" src="./locales/en.js"></script>
+    <script src="./avaya-ccaas-chat-sdk.js"></script>
+    <script defer src="chat-client.js"></script></head>
+
+<body>
+  
+
+
+    <!-- Default Values
+        show-pre-chat="true"
+        participant-identity-type="participant-name" 
+        Participant-avatar-icon="participant-avatar.svg"
+        participants-avatar-bg-colors="#CC0000,#000000,#eeeeee"
+        text-color="#fff"
+    -->
+
+    <chat-app 
+        id="chat-app"
+        connector-url="https://au.cc.avayacloud.com" 
+        jwt-server-url="http://3.27.192.98:3000/v1/getJWT"
+        integration-id="74cfe0b0-e53f-49f1-b7cb-31a48462a30c" 
+        color="#50B868" 
+        text-color="#fff"
+        logo-url="https://ccna.com.au/wp-content/uploads/2020/06/logo.png" 
+        pre-chat-logo-url="https://ccna.com.au/wp-content/uploads/2020/06/logo.png"
+        description="Welcome to CCNA! Message us below or from your favorite app."
+        disclaimer="+ Please note that for quality assurance and training purposes, our conversations may be recorded and monitored. By engaging in this chat, you consent to the recording and monitoring of your conversation. Rest assured, we treat your privacy with the utmost respect and confidentiality. If you have any concerns or questions regarding this policy, please feel free to ask one of our representatives. Thank you for choosing <b>CCNA</b>."
+        show-context-params="false" 
+        chat-header-text="CCNA Customer Support Chat" 
+        show-chat-header="true"
+        show-pre-chat="true" 
+        participant-identity-type="participant-name" 
+        brand-name="CCNA"
+        participants-avatar-bg-colors="#D93D32,#0B3363,#000000,#A63B11" 
+        System-avatar-icon="assets/icons/avatar-bot.svg"
+        participant-avatar-icon="assets/icons/avatar-agent.svg" 
+        lang="en" 
+        direction="ltr" 
+        size="md"
+        engagement-params='{"availableBalance":"1998"}' 
+        emoji-control-disabled="false">
+    </chat-app>
+ 
+
+</body>
+
+</html>
